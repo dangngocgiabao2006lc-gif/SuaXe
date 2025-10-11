@@ -1,0 +1,170 @@
+/* ===========================
+   LOGIN PAGE - SỬA XE KHÁCH HÀNG
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: 
+    linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)),
+    url("../img/anhnen.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  animation: fadeIn 1s ease;
+}
+
+/* Hiệu ứng mờ kính (Glassmorphism) */
+.auth-container {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  padding: 50px 45px;
+  width: 100%;
+  max-width: 1500px; /* tăng chiều ngang */
+  color: #fff;
+  transition: 0.3s;
+  transform: translateY(20px);
+  animation: slideUp 0.8s ease forwards;
+}
+
+.auth-container:hover {
+  box-shadow: 0 0 60px rgba(39, 245, 128, 0.3);
+}
+
+/* Tiêu đề */
+h5 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #27F580;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Ô input và icon */
+.form-group {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #27F580;
+  font-size: 1.1rem;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  padding: 12px 14px 12px 42px; /* chừa khoảng trống cho icon */
+  width: 100%;
+  transition: 0.3s;
+}
+
+.form-control::placeholder {
+  color: #ccc;
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px #27f580;
+  color: #fff;
+  outline: none;
+}
+
+/* Nút đăng nhập */
+.btn-auth {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #27F580;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-auth:hover {
+  background-color: #20c96b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(39, 245, 128, 0.4);
+}
+
+/* Logo container */
+.Logo-container {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: #27F580;
+  color: #000;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.4rem;
+  margin: 0 auto 15px auto;
+  transition: 0.3s;
+}
+
+.Logo-container:hover {
+  background: #27DAF5;
+  transform: rotate(10deg);
+}
+
+/* Link đăng ký */
+.login-link {
+  text-align: center;
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-top: 15px;
+}
+
+.login-link a {
+  color: #27DAF5;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.login-link a:hover {
+  color: #27F580;
+}
+
+/* Hiệu ứng xuất hiện */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    background: 
+      linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)),
+      url("../img/anhnen.jpg") center/cover no-repeat;
+  }
+  .auth-container {
+    padding: 35px 25px;
+    max-width: 90%;
+  }
+}
